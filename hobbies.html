@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="UFT-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+		<title>Yana's Blog</title>
+		
+		<style>
+		body {
+		  font-family: Arial;
+		  margin: 0;
+		}
+
+		* {
+		  box-sizing: border-box;
+		}
+
+		img {
+		  vertical-align: middle;
+		}
+
+		/* Position the image container (needed to position the left and right arrows) */
+		.container {
+		  position: relative;
+		}
+
+		/* Hide the images by default */
+		.mySlides {
+		  display: none;
+		}
+
+		/* Add a pointer when hovering over the thumbnail images */
+		.cursor {
+		  cursor: pointer;
+		}
+
+		/* Next & previous buttons */
+		.prev,
+		.next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 40%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -50px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 20px;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		  -webkit-user-select: none;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover,
+		.next:hover {
+		  background-color: rgba(0, 0, 0, 0.8);
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 12px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+
+		/* Container for image text */
+		.caption-container {
+		  text-align: center;
+		  background-color: #222;
+		  padding: 2px 16px;
+		  color: white;
+		}
+
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		/* Six columns side by side */
+		.column {
+		  float: left;
+		  width: 16.66%;
+		}
+
+		/* Add a transparency effect for thumnbail images */
+		.demo {
+		  opacity: 0.6;
+		}
+
+		.active,
+		.demo:hover {
+		  opacity: 1;
+		}
+		</style>
+		
+</head>
+
+<body bgcolor="pink">
+
+<h1 align="center"><font face ="Comic sans MS" color="royalblue"><ins>My Hobbies</ins></font></h1>
+
+</table><table border="5" align="center">
+<tbody><tr><td><a href="index.html">Home</a> 
+</td><td><a href="hobbies.html">Hobbies</a> 
+</td><td><a href="my friends.html">My Friends</a> 
+</td><td><a href="my furry friend.html">My Furry Friend</a> 
+</td><td><a href="my family.html">My Family</a> 
+</td><td><a href="my favourite food.html">My Favorite Food</a> 
+</td><td><a href="contact me.html">Contact Me</a> 
+
+</td></tr>
+
+</tbody></table>
+
+<br>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1/2</div>
+    <img src="image/insidious.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2/2</div>
+    <img src="image/book.jpg" style="width:100%">
+	</div>
+	
+	 <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  
+  <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+<br><center></br>
+
+<audio controls>
+  <source src="Heartbeat Instrumental.ogg" type="audio/ogg">
+  <source src="Heartbeat Instrumental.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<br>
+
+<p align="justify"><font face = "Comic sans MS" color="black" font size="5px">A hobby is a regular activity that can be done for pleasure, usually in one's spare time. My hobbies are listen to music, watch movies and reading books. I love to watch English and Malay and what I love the most are horror, fantasy and mystery genre because their graphic is so real and stories are great compared to other movies. Example, Insidious series movies. For reading, I like to read all types of genre. Other than that, I like to listen to English music because I understand and prefer the song and the lyrics more.</font></p>
+
+<br><center></br>
+
+<a href="#top"><text align="center-right">Go to top</a>
+
+</body>
+</html>
